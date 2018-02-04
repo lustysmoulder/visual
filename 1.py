@@ -18,8 +18,8 @@ a1 = tk.Entry(frame, width=12, textvariable=v1).grid(row=0,column=1,  sticky='W'
 
 
 v2 = tk.IntVar()
-lbl2 = tk.Label(frame, text='2').grid(row=4, column=0)
-a2 = tk.Entry(frame, width=12, textvariable=v2).grid(row=4,column=1, sticky='W', padx=10, pady=5)
+lbl2 = tk.Label(frame, text='2').grid(row=3, column=0)
+a2 = tk.Entry(frame, width=12, textvariable=v2).grid(row=3,column=1, sticky='W', padx=10, pady=5)
 
 v3 = tk.IntVar()
 lbl3 = tk.Label(frame, text='3').grid(row=4, column=0)
@@ -45,11 +45,20 @@ v8 = tk.IntVar()
 lbl8 = tk.Label(frame, text='8').grid(row=9, column=0)
 a8 = tk.Entry(frame, width=12, textvariable=v8).grid(row=9,column=1, sticky='W', padx=10, pady=5)
 
+v9 = tk.IntVar()
+lbl9 = tk.Label(frame, text='9').grid(row=10, column=0)
+a9 = tk.Entry(frame, width=12, textvariable=v7).grid(row=10,column=1, sticky='W', padx=10, pady=5)
+
+v10 = tk.IntVar()
+lbl10 = tk.Label(frame, text='10').grid(row=11, column=0)
+a10 = tk.Entry(frame, width=12, textvariable=v8).grid(row=11,column=1, sticky='W', padx=10, pady=5)
+
 
 
 txt1='credit score = '
 def creditinfo():
-    messagebox.showinfo("ML predict 1.0", txt1)      
+    messagebox.showinfo("ML predict 1.0", txt1)  
+    print(v4.get()-v5.get())    
 
 
 btn1 = tk.Button(text='Рассчитать',command=creditinfo).grid(row=14, column=0, pady=15, padx=20, sticky='W')
